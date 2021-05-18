@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>什么是前端工程化 | suky blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just for fun">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.9c8bb43c.js" as="script"><link rel="preload" href="/assets/js/2.eabe7514.js" as="script"><link rel="preload" href="/assets/js/9.d2d6c988.js" as="script"><link rel="prefetch" href="/assets/js/10.3b01342e.js"><link rel="prefetch" href="/assets/js/11.a5608609.js"><link rel="prefetch" href="/assets/js/12.d25148a7.js"><link rel="prefetch" href="/assets/js/13.f33dbd31.js"><link rel="prefetch" href="/assets/js/14.44e3df27.js"><link rel="prefetch" href="/assets/js/15.34df9c71.js"><link rel="prefetch" href="/assets/js/3.f19f8194.js"><link rel="prefetch" href="/assets/js/4.69e95b75.js"><link rel="prefetch" href="/assets/js/5.83a5511f.js"><link rel="prefetch" href="/assets/js/6.3c2a093e.js"><link rel="prefetch" href="/assets/js/7.38b54764.js"><link rel="prefetch" href="/assets/js/8.6ee2f7a3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">suky blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/modules/" class="nav-link">
+  功能实现
+</a></div><div class="nav-item"><a href="/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/engineering/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  前端工程化
+</a></div><div class="nav-item"><a href="/else/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/modules/" class="nav-link">
+  功能实现
+</a></div><div class="nav-item"><a href="/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/engineering/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  前端工程化
+</a></div><div class="nav-item"><a href="/else/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/engineering/" aria-current="page" class="active sidebar-link">什么是前端工程化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/engineering/#为什么需要前端工程化" class="sidebar-link">为什么需要前端工程化</a></li><li class="sidebar-sub-header"><a href="/engineering/#脚手架工具开发" class="sidebar-link">脚手架工具开发</a></li><li class="sidebar-sub-header"><a href="/engineering/#自动化构建工作流" class="sidebar-link">自动化构建工作流</a></li></ul></li><li><a href="/engineering/gulp.html" class="sidebar-link">gulp 的使用</a></li><li><a href="/engineering/seo.html" class="sidebar-link">前端页面 SEO</a></li><li><a href="/engineering/webpack-hmr.html" class="sidebar-link">❗ 什么是 webpack 的 HMR</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="什么是前端工程化"><a href="#什么是前端工程化" class="header-anchor">#</a> 什么是前端工程化</h1> <h2 id="为什么需要前端工程化"><a href="#为什么需要前端工程化" class="header-anchor">#</a> 为什么需要前端工程化</h2> <ul><li>手动压缩手动上传这类重复工作</li> <li>ES6 不能直接兼容</li> <li>模块化无法直接读取</li> <li>代码风格代码质量无法保证</li></ul> <h2 id="脚手架工具开发"><a href="#脚手架工具开发" class="header-anchor">#</a> 脚手架工具开发</h2> <p>创建项目基础结构、提供项目规范和约定，常用 Yeoman Plop</p> <h4 id="yeoman"><a href="#yeoman" class="header-anchor">#</a> Yeoman</h4> <h5 id="下载脚手架安装工具"><a href="#下载脚手架安装工具" class="header-anchor">#</a> 下载脚手架安装工具</h5> <p><code>npm install -g yo</code></p> <h5 id="下载合适的脚手架-generator"><a href="#下载合适的脚手架-generator" class="header-anchor">#</a> 下载合适的脚手架 generator</h5> <p><code>npm install -g generator-&lt;name&gt;</code></p> <h5 id="安装脚手架"><a href="#安装脚手架" class="header-anchor">#</a> 安装脚手架</h5> <p><code>yo &lt;name&gt;</code></p> <h5 id="在原本存在的项目中进行一点改动-sub-generator"><a href="#在原本存在的项目中进行一点改动-sub-generator" class="header-anchor">#</a> 在原本存在的项目中进行一点改动 Sub Generator</h5> <p>具体支持什么 Sub-generator 则需要我们自己去文档查看
+如 <code>yo node:cli</code></p> <h5 id="下载时可能需要的镜像源"><a href="#下载时可能需要的镜像源" class="header-anchor">#</a> 下载时可能需要的镜像源</h5> <p><img src="/images/mirror.png" alt=""></p> <h5 id="yeoman-预先定义顺序方法"><a href="#yeoman-预先定义顺序方法" class="header-anchor">#</a> yeoman 预先定义顺序方法</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>initializing <span class="token operator">--</span> 初始化方法（检查状态、获取配置等）
+prompting <span class="token operator">--</span> 获取用户交互数据（<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>）
+configuring <span class="token operator">--</span> 编辑和配置项目的配置文件
+<span class="token keyword">default</span> <span class="token operator">--</span> 如果generator内部还有不符合任意一个任务队列任务名的方法，将会被放在<span class="token keyword">default</span>这个任务下进行运行
+writing <span class="token operator">--</span> 填充预置模板
+conflicts <span class="token operator">--</span> 处理冲突（仅限内部使用）
+install <span class="token operator">--</span> 进行依赖的安装（eg：npm，bower）
+end <span class="token operator">--</span> 最后调用，做一些clean工作
+</code></pre></div><h5 id="自定义的-generator"><a href="#自定义的-generator" class="header-anchor">#</a> 自定义的 Generator</h5> <div class="language- extra-class"><pre class="language-text"><code>generators/ 生成器目录
+ app/       默认生成器目录
+    index.js    核心入口
+package.json
+</code></pre></div><p>脚手架必须要求以<code>generator-&lt;name&gt;</code>命名</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>npm init
+npm install yeoman<span class="token operator">-</span>generator
+</code></pre></div><p>index.js</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//需要导出一个继承Yeoman-Genarator的类型，我们在其中使用一些生命周期办法，实现我们的自定义脚手架</span>
+<span class="token keyword">const</span> Generator <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;yeoman-generator&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Generator <span class="token punctuation">{</span>
+  <span class="token function">writing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 写入文件，例子 写入一个有随机数的文件</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>fs<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">destinationPath</span><span class="token punctuation">(</span><span class="token string">&quot;temp.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>链接文件成为全局模块包
+<code>npm link</code> 然后就可以全局通过<code>yo &lt;name&gt;</code>在本地生成脚手架</p> <h5 id="根据模板生成文件"><a href="#根据模板生成文件" class="header-anchor">#</a> 根据模板生成文件</h5> <p>支持<strong>EJS</strong>语法,动态输入内容替换<code>&lt;%= name %&gt;</code>,原封不动输出<code>&lt;%%= name %&gt;</code></p> <p>在<code>app</code>文件夹中设置<code>templates</code>文件夹，存放需要拷贝的文件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> Generator <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;yeoman-generator&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Generator <span class="token punctuation">{</span>
+  <span class="token function">writing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> tmpl <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">templatePath</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;file-name&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 自动检索templates文件夹下的内容</span>
+    <span class="token keyword">const</span> output <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">destinationPath</span><span class="token punctuation">(</span><span class="token string">&quot;foo.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出文件名</span>
+    <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">&quot;hello&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>fs<span class="token punctuation">.</span><span class="token function">copyTpl</span><span class="token punctuation">(</span>tmpl<span class="token punctuation">,</span> output<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 多个文件，就编写数组，循环生成</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="接受用户输入"><a href="#接受用户输入" class="header-anchor">#</a> 接受用户输入</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> Generator <span class="token punctuation">{</span>
+  <span class="token function">prompting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 询问用户</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span>
+        message<span class="token operator">:</span> <span class="token string">&quot;Your project name&quot;</span><span class="token punctuation">,</span>
+        <span class="token keyword">default</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>appname<span class="token punctuation">,</span> <span class="token comment">//appname为项目生成目录名称</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">&quot;framework&quot;</span><span class="token punctuation">,</span>
+        message<span class="token operator">:</span> <span class="token string">&quot;choose a framework&quot;</span><span class="token punctuation">,</span>
+        choices<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;React&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Vue&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Angular&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">&quot;React&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ans</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ans =&gt; { name:'user input val'}</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>answer <span class="token operator">=</span> answers<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="发布-generator"><a href="#发布-generator" class="header-anchor">#</a> 发布 generator</h5> <p>提交到 github
+<code>npm publish</code> 版本号是否修改 ，且不能发布到淘宝镜像源</p> <h4 id="plop"><a href="#plop" class="header-anchor">#</a> Plop</h4> <p>创建项目中某个模块经常需要</p> <h5 id="如何使用"><a href="#如何使用" class="header-anchor">#</a> 如何使用</h5> <p>下载<code>npm install plop --save-dev</code></p> <p>在根目录下创建<code>plopfile.js</code></p> <p>在<code>plopfile.js</code>中编写我们需要的东西</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">plop</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    plop<span class="token punctuation">.</span><span class="token function">setGenerator</span><span class="token punctuation">(</span><span class="token string">'component'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        description<span class="token operator">:</span> <span class="token string">'create a component'</span><span class="token punctuation">,</span>
+        prompts<span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span>
+                name<span class="token operator">:</span><span class="token string">'name'</span><span class="token punctuation">,</span>
+                message<span class="token operator">:</span> <span class="token string">'Your project name'</span><span class="token punctuation">,</span>
+                <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">'MyCompnent'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        actions<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'add'</span><span class="token punctuation">,</span> <span class="token comment">// 提交文件</span>
+                path<span class="token operator">:</span> <span class="token string">'src/components/{{name}}/{{name}}.js'</span><span class="token punctuation">,</span><span class="token comment">// 双括号取值</span>
+                templateFile<span class="token operator">:</span> <span class="token string">''</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token comment">// 添加多个actions就能生成多个文件</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>拷贝的文件设置在<code>plop-templates</code>文件夹中，文件以<code>&lt;name&gt;.hbs</code>命名，使用双括号赋值</p> <p>输入命令<code>plop component</code>可以使用我们的 plop</p> <h4 id="脚手架工作原理"><a href="#脚手架工作原理" class="header-anchor">#</a> 脚手架工作原理</h4> <p>依靠<code>node-cli</code>实现</p> <p>node 命令行询问<code>npm install inquirer</code> <code>npm install ejs</code> 模板引擎
+设置<code>templates</code>文件夹编写模板文件</p> <p>在<code>cli.js</code>中</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
+
+<span class="token comment">// node cli都要有这样的文件头</span>
+<span class="token comment">// 如果是Linux或者macOS则还需要修改文件读写权限 755 （chmod 755 cli.js)</span>
+
+<span class="token comment">// 脚手架工作过程：交互提问、根据结果生成文件</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> ejs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ejs'</span><span class="token punctuation">)</span>
+
+inquirer<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+      message<span class="token operator">:</span> <span class="token string">'Project name'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">ans</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 模板目录</span>
+    <span class="token keyword">const</span> tmplDir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'templates'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 目标目录</span>
+    <span class="token keyword">const</span> destDir <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 模板下文件复制</span>
+    fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span><span class="token parameter">tmplDir<span class="token punctuation">,</span> （err<span class="token punctuation">,</span>files</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+        files<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">file</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 模板引擎复制</span>
+            ejs<span class="token punctuation">.</span><span class="token function">renderFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>tmplDir<span class="token punctuation">,</span>file<span class="token punctuation">)</span><span class="token punctuation">,</span> ans<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+                fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>destDir<span class="token punctuation">,</span>file<span class="token punctuation">)</span><span class="token punctuation">,</span>result<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>npm link</code>
+输入文件名就可以正常跑 cli.js 文件 ,引用方和使用方都需要</p> <h2 id="自动化构建工作流"><a href="#自动化构建工作流" class="header-anchor">#</a> 自动化构建工作流</h2> <p>重复工作就交给自动化</p> <ul><li>npm scripts
+设置<code>serve:&lt;cmd&gt;</code>我们可以通过<code>preserve:&lt;cmd&gt;</code>来设置钩子，那么我们在 scripts 运行之前会自动运行<code>pre-&lt;name&gt;</code></li></ul> <p><code>npm install npm-run-all</code> 能让我们 scripts 同步运行<code>start:run-p &lt;cmd1&gt; &lt;cmd2&gt;</code></p> <p>例如
+<code>sass scss/main.css css/style.css --watch</code>&amp; <code>browser-sync . --files \&quot;css/*.css\&quot;&quot;</code> 自动检测变化，修改就可以及时更新</p> <h3 id="常用的工作流工具"><a href="#常用的工作流工具" class="header-anchor">#</a> 常用的工作流工具</h3> <ul><li>Grunt 最老 磁盘读写 构建速度慢</li> <li>Gulp 好用 内存读写</li> <li>FIS 捆绑套餐 基本没人用</li></ul> <h3 id="grunt"><a href="#grunt" class="header-anchor">#</a> Grunt</h3> <p><code>npm install grunt</code>
+新建<code>gruntfile.js</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 定义Grunt自动执行的任务</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">grunt</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    grunt<span class="token punctuation">.</span><span class="token function">registerTask</span><span class="token punctuation">(</span><span class="token string">'&lt;task name&gt;'</span><span class="token punctuation">,</span> <span class="token string">'任务描述'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// do sth</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// defult表示默认任务，直接用grunt调用</span>
+     grunt<span class="token punctuation">.</span><span class="token function">registerTask</span><span class="token punctuation">(</span><span class="token string">'&lt;task name&gt;'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>task1<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&lt;</span>task2<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用<code>grunt &lt;task&gt;</code>能够直接进行任务调用</p> <p>需要异步任务时</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>grunt<span class="token punctuation">.</span><span class="token function">registerTask</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;task name&gt;&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> done <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 需调用该函数才知道是任务执行完成</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>标记失败任务</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>grunt<span class="token punctuation">.</span><span class="token function">registerTask</span><span class="token punctuation">(</span><span class="token string">&quot;&lt;task name&gt;&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">// 表示失败任务</span>
+  <span class="token comment">//done(false) 异步失败任务</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>配置选项</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">grunt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    foo<span class="token operator">:</span> <span class="token string">&quot;bar&quot;</span><span class="token punctuation">,</span>
+    obj<span class="token operator">:</span> <span class="token punctuation">{</span>
+      a<span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//调用</span>
+  grunt<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  grunt<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token string">&quot;obj.a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>多目标任务,子任务</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">grunt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    build<span class="token operator">:</span> <span class="token punctuation">{</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 任务配置选项</span>
+      css<span class="token operator">:</span> <span class="token punctuation">{</span>
+        options<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 任务配置选项</span>
+        a<span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      js<span class="token operator">:</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  grunt<span class="token punctuation">.</span><span class="token function">registerMultiTask</span><span class="token punctuation">(</span><span class="token string">&quot;build&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this.options()得到所有配置选项</span>
+    <span class="token comment">// this.target 得到config的key css/js</span>
+    <span class="token comment">// this.data 得到config中的值 '1' /'2'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Grunt 插件的使用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">grunt</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       clean：<span class="token punctuation">{</span>
+           temp<span class="token operator">:</span> <span class="token string">'temp/app.js'</span> <span class="token comment">//temp/*.js temp/** 使用通配符也可以</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    grunt<span class="token punctuation">.</span><span class="token function">loadNpmTasks</span><span class="token punctuation">(</span><span class="token string">'grunt-contrib-clean'</span><span class="token punctuation">)</span> <span class="token comment">// 需要提前npm下载 多目标 最后的名字clean就是运行的&lt;task&gt;名字</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>常用插件</p> <ul><li>sass</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// npm install sass grunt-sass</span>
+<span class="token keyword">const</span> sass <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sass&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">grunt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    sass<span class="token operator">:</span> <span class="token punctuation">{</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        sourceMap<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        implementation<span class="token operator">:</span> sass<span class="token punctuation">,</span> <span class="token comment">// 实现</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      main<span class="token operator">:</span> <span class="token punctuation">{</span>
+        files<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;dist/css/main.css&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/scss/main.scss&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  grunt<span class="token punctuation">.</span><span class="token function">loadNpmTasks</span><span class="token punctuation">(</span><span class="token string">&quot;grunt-sass&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 需要提前npm下载 多目标 最后的名字clean就是运行的&lt;task&gt;名字</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>babel</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// npm install grunt-babel @babel/core @babel/preset-env</span>
+<span class="token keyword">const</span> loadGruntTasks <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;load-grunt-tasks&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 方便加载多个npm task</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">grunt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    babel<span class="token operator">:</span> <span class="token punctuation">{</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        sourceMap<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 实现</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      main<span class="token operator">:</span> <span class="token punctuation">{</span>
+        files<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;dist/js/app.js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/js/app.js&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">loadGruntTasks</span><span class="token punctuation">(</span>grunt<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 自动加载grunt中所有插件任务</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>grunt-contrib-watch 监听更改</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">grunt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  grunt<span class="token punctuation">.</span><span class="token function">initConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+      js<span class="token operator">:</span> <span class="token punctuation">{</span>
+        files<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/js/*.js&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        tasks<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;babel&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      css<span class="token operator">:</span> <span class="token punctuation">{</span>
+        files<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/scss/*.scss&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        tasks<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;sass&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/engineering/gulp.html">
+        gulp 的使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9c8bb43c.js" defer></script><script src="/assets/js/2.eabe7514.js" defer></script><script src="/assets/js/9.d2d6c988.js" defer></script>
+  </body>
+</html>
