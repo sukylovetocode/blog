@@ -1,7 +1,7 @@
 module.exports = {
   title: "suky blog",
   description: "just for fun",
-  base: "/",
+  base: "/blog/",
   configureWebpack: {
     resolve: {
       alias: {
