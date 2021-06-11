@@ -23,7 +23,11 @@ module.exports = {
       { text: "其他", link: "/else/" },
     ],
     sidebar: {
+      "/modules/": ["", "video", "vue-directive", "vue-practice", "web-worker"],
+      "/theory/": [""],
+      "/visualization/": [""],
       "/engineering/": ["", "gulp", "seo", "webpack-hmr"],
+      "/else/": [""],
     },
   },
 };
