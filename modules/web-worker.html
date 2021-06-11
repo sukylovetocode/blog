@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>❗ 实时推送-web worker | suky blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just for fun">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.8a54f0e1.js" as="script"><link rel="preload" href="/blog/assets/js/2.99672014.js" as="script"><link rel="preload" href="/blog/assets/js/20.4c11b076.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.30098915.js"><link rel="prefetch" href="/blog/assets/js/11.01a7bb32.js"><link rel="prefetch" href="/blog/assets/js/12.f6a23b29.js"><link rel="prefetch" href="/blog/assets/js/13.783d2ca3.js"><link rel="prefetch" href="/blog/assets/js/14.bbca777a.js"><link rel="prefetch" href="/blog/assets/js/15.7aee58fc.js"><link rel="prefetch" href="/blog/assets/js/16.bc1a9abb.js"><link rel="prefetch" href="/blog/assets/js/17.55ad85a5.js"><link rel="prefetch" href="/blog/assets/js/18.58d328b7.js"><link rel="prefetch" href="/blog/assets/js/19.f10316de.js"><link rel="prefetch" href="/blog/assets/js/21.ceb3b920.js"><link rel="prefetch" href="/blog/assets/js/22.5de30657.js"><link rel="prefetch" href="/blog/assets/js/23.f0173a34.js"><link rel="prefetch" href="/blog/assets/js/24.225aca0c.js"><link rel="prefetch" href="/blog/assets/js/25.8bd8c2c3.js"><link rel="prefetch" href="/blog/assets/js/3.1bd67bfe.js"><link rel="prefetch" href="/blog/assets/js/4.69e95b75.js"><link rel="prefetch" href="/blog/assets/js/5.83a5511f.js"><link rel="prefetch" href="/blog/assets/js/6.3c2a093e.js"><link rel="prefetch" href="/blog/assets/js/7.38b54764.js"><link rel="prefetch" href="/blog/assets/js/8.6ee2f7a3.js"><link rel="prefetch" href="/blog/assets/js/9.c792a14a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">suky blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link router-link-active">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link router-link-active">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/modules/" aria-current="page" class="sidebar-link">基础知识</a></li><li><a href="/blog/modules/video.html" class="sidebar-link">video 的那些事</a></li><li><a href="/blog/modules/vue-directive.html" class="sidebar-link">VUE 自定义指令便利店</a></li><li><a href="/blog/modules/vue-practice.html" class="sidebar-link">批量注册指令</a></li><li><a href="/blog/modules/web-worker.html" aria-current="page" class="active sidebar-link">❗ 实时推送-web worker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/modules/web-worker.html#❗-实时推送-web-worker" class="sidebar-link">❗ 实时推送-web worker</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="❗-实时推送-web-worker"><a href="#❗-实时推送-web-worker" class="header-anchor">#</a> ❗ 实时推送-web worker</h2> <p>实话说，我见到一个完美的应用是在小广告中，下载的时候说需要你的权限，然后就开始无限的推送小弹窗 🤣;当然理论上是可以比如登录了一个商城，提醒顾客他购物车的商品降价了；比如在一个商家管理后台，有账号风险的时候及时弹窗告知用户去修改。</p> <p><strong>离线功能</strong>将颠覆原来的 web 退出后无法访问的障碍，真正让 web 应用化</p> <p><img src="/images/worker-lifecycle.png" alt="worker-lifestyle"></p> <p>首先要使用要保证我们在电脑中设置了允许接受 chrome 消息，不然就没有用。</p> <ul><li>需要遵守 web push 协议 我们可以使用 <a href="https://github.com/web-push-libs/web-push" target="_blank" rel="noopener noreferrer">web push<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>这个库去避免自己写</li> <li>push notification 是属于 service worker 的一部分，因此学 push notification 之前要先会 service worker</li></ul> <h3 id="start"><a href="#start" class="header-anchor">#</a> start</h3> <p>注册的时候我们需要生成一个私钥和密钥去注册我们的 service worker</p> <p><img src="/images/service-worker.png" alt="service-worker"></p> <p>注册我们的<code>service worker js</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">let</span> swRegistration<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;serviceWorker&quot;</span> <span class="token keyword">in</span> navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Service Worker and Push are supported&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 注册service worker</span>
+  navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">&quot;service-worker.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">swReg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Service Worker is registered&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    swRegistration <span class="token operator">=</span> swReg<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在<code>service-worker.js</code>中写各种监听事件</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token comment">// Incrementing OFFLINE_VERSION will kick off the install event and force</span>
+<span class="token comment">// previously cached resources to be updated from the network.</span>
+<span class="token keyword">const</span> <span class="token constant">PRECACHE</span> <span class="token operator">=</span> <span class="token string">&quot;precache-v1&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">RUNTIME</span> <span class="token operator">=</span> <span class="token string">&quot;runtime&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">PRECACHE_URLS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;offline.html&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;abc.html&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;js/index.js&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;index.html&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">OFFLINE_URL</span> <span class="token operator">=</span> <span class="token string">&quot;offline.html&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听事件 install</span>
+self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;install&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  event<span class="token punctuation">.</span><span class="token function">waitUntil</span><span class="token punctuation">(</span>
+    <span class="token comment">// 缓存文件</span>
+    caches
+      <span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token constant">PRECACHE</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cache</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> cache<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span><span class="token constant">PRECACHE_URLS</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token function">skipWaiting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 强制让等待的service 变成active的service</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听事件 activate</span>
+self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;activate&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> currentCaches <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token constant">PRECACHE</span><span class="token punctuation">,</span> <span class="token constant">RUNTIME</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  event<span class="token punctuation">.</span><span class="token function">waitUntil</span><span class="token punctuation">(</span>
+    <span class="token comment">// 检测不属于自己的缓存文件 及时删除</span>
+    caches
+      <span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cacheNames</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> cacheNames<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>
+          <span class="token punctuation">(</span><span class="token parameter">cacheName</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>currentCaches<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>cacheName<span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cachesToDelete</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>
+          cachesToDelete<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cacheToDelete</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> caches<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>cacheToDelete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> self<span class="token punctuation">.</span>clients<span class="token punctuation">.</span><span class="token function">claim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听事件 fetch 拦截请求</span>
+self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;fetch&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// We only want to call event.respondWith() if this is a navigation request</span>
+  <span class="token comment">// for an HTML page.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>request<span class="token punctuation">.</span>mode <span class="token operator">===</span> <span class="token string">&quot;navigate&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">respondWith</span><span class="token punctuation">(</span>
+      <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+          <span class="token comment">// First, try to use the navigation preload response if it's supported.</span>
+          <span class="token keyword">const</span> preloadResponse <span class="token operator">=</span> <span class="token keyword">await</span> event<span class="token punctuation">.</span>preloadResponse<span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>preloadResponse<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> preloadResponse<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token comment">// Always try the network first.</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> networkResponse <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">// return networkResponse;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Fetch failed; returning offline page instead.&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">// 找不到请求返回404 offline fallback</span>
+          <span class="token keyword">const</span> cache <span class="token operator">=</span> <span class="token keyword">await</span> caches<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token constant">PRECACHE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> cachedResponse <span class="token operator">=</span> <span class="token keyword">await</span> cache<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token constant">OFFLINE_URL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span> cachedResponse<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>push notification</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token comment">// 主要逻辑</span>
+<span class="token keyword">let</span> swRegistration<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;serviceWorker&quot;</span> <span class="token keyword">in</span> navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 密钥解析</span>
+<span class="token keyword">function</span> <span class="token function">urlB64ToUint8Array</span><span class="token punctuation">(</span><span class="token parameter">base64String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> padding <span class="token operator">=</span> <span class="token string">&quot;=&quot;</span><span class="token punctuation">.</span><span class="token function">repeat</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">-</span> <span class="token punctuation">(</span>base64String<span class="token punctuation">.</span>length <span class="token operator">%</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> base64 <span class="token operator">=</span> <span class="token punctuation">(</span>base64String <span class="token operator">+</span> padding<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\-</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;+&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">_</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> rawData <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">atob</span><span class="token punctuation">(</span>base64<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> outputArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Uint8Array</span><span class="token punctuation">(</span>rawData<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rawData<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    outputArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> rawData<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> outputArray<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> pushButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.js-push-btn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> isSubscributed <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> applicationServerKey<span class="token punctuation">;</span>
+<span class="token comment">// 后端请求</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&quot;/keys&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    applicationServerKey <span class="token operator">=</span> data<span class="token punctuation">.</span>keys<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">subscribeUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  isSubscributed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  pushButton<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">&quot;disable push messaging&quot;</span><span class="token punctuation">;</span>
+
+  swRegistration<span class="token punctuation">.</span>pushManager
+    <span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      userVisibleOnly<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      applicationServerKey<span class="token operator">:</span> <span class="token function">urlB64ToUint8Array</span><span class="token punctuation">(</span>applicationServerKey<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">subscription</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;User is subscribed.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>subscription<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 后端发送事件</span>
+      <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&quot;/subscribe&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        body<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>subscription<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        method<span class="token operator">:</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;Failed to subscribe the user: &quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">unsubscribeUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  isSubscributed <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  pushButton<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">&quot;enable push messaging&quot;</span><span class="token punctuation">;</span>
+  <span class="token comment">// 取消订阅</span>
+  swRegistration<span class="token punctuation">.</span>pushManager
+    <span class="token punctuation">.</span><span class="token function">getSubscription</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">subscription</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>subscription<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> subscription<span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Error unsubscribing&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 添加点击事件</span>
+pushButton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>isSubscributed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">unsubscribeUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">subscribeUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>server.js</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpush <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;web-push&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bodyparser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa-bodyparser&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token function">bodyparser</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    enableTypes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;json&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;form&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;koa-static&quot;</span><span class="token punctuation">)</span><span class="token punctuation">(</span>__dirname <span class="token operator">+</span> <span class="token string">&quot;/public&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// VAPID 生成</span>
+<span class="token keyword">const</span> vapidKeys <span class="token operator">=</span> webpush<span class="token punctuation">.</span><span class="token function">generateVAPIDKeys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+webpush<span class="token punctuation">.</span><span class="token function">setVapidDetails</span><span class="token punctuation">(</span>
+  <span class="token string">&quot;mailto:545220919@qq.com&quot;</span><span class="token punctuation">,</span>
+  vapidKeys<span class="token punctuation">.</span>publicKey<span class="token punctuation">,</span>
+  vapidKeys<span class="token punctuation">.</span>privateKey
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>path <span class="token operator">===</span> <span class="token string">&quot;/keys&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span> keys<span class="token operator">:</span> vapidKeys<span class="token punctuation">.</span>publicKey <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>path <span class="token operator">===</span> <span class="token string">&quot;/subscribe&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    webpush
+      <span class="token punctuation">.</span><span class="token function">sendNotification</span><span class="token punctuation">(</span>
+        <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token operator">:</span> <span class="token string">&quot;we are successful&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server started on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>service-worker.js</code> 增加监听</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token comment">// 发送事件时 要做啥</span>
+self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;push&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;[Service Worker] Push Received.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[Service Worker] Push had this data: &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>event<span class="token punctuation">.</span>data<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> title <span class="token operator">=</span> <span class="token string">&quot;Push demo&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+    body<span class="token operator">:</span> <span class="token string">&quot;Yay it works.&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  event<span class="token punctuation">.</span><span class="token function">waitUntil</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>registration<span class="token punctuation">.</span><span class="token function">showNotification</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 点击消息</span>
+self<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;notificationclick&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;[Service Worker] Notification click Received.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  event<span class="token punctuation">.</span>notification<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  event<span class="token punctuation">.</span><span class="token function">waitUntil</span><span class="token punctuation">(</span>clients<span class="token punctuation">.</span><span class="token function">openWindow</span><span class="token punctuation">(</span><span class="token string">&quot;https://developers.google.com/web/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>试了下 在进行<code>push notification</code>订阅时会生成一个<code>endpoints</code> <code>keys</code>的 json 数组，这相当于用来标识订阅用户唯一的数据，如果真实开发中应该把这个数据存在数据库中（同样密钥公钥也是</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/modules/vue-practice.html" class="prev">
+        批量注册指令
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.8a54f0e1.js" defer></script><script src="/blog/assets/js/2.99672014.js" defer></script><script src="/blog/assets/js/20.4c11b076.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IOS 经历过的 BUG | suky blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just for fun">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.8a54f0e1.js" as="script"><link rel="preload" href="/blog/assets/js/2.99672014.js" as="script"><link rel="preload" href="/blog/assets/js/10.30098915.js" as="script"><link rel="prefetch" href="/blog/assets/js/11.01a7bb32.js"><link rel="prefetch" href="/blog/assets/js/12.f6a23b29.js"><link rel="prefetch" href="/blog/assets/js/13.783d2ca3.js"><link rel="prefetch" href="/blog/assets/js/14.bbca777a.js"><link rel="prefetch" href="/blog/assets/js/15.7aee58fc.js"><link rel="prefetch" href="/blog/assets/js/16.bc1a9abb.js"><link rel="prefetch" href="/blog/assets/js/17.55ad85a5.js"><link rel="prefetch" href="/blog/assets/js/18.58d328b7.js"><link rel="prefetch" href="/blog/assets/js/19.f10316de.js"><link rel="prefetch" href="/blog/assets/js/20.4c11b076.js"><link rel="prefetch" href="/blog/assets/js/21.ceb3b920.js"><link rel="prefetch" href="/blog/assets/js/22.5de30657.js"><link rel="prefetch" href="/blog/assets/js/23.f0173a34.js"><link rel="prefetch" href="/blog/assets/js/24.225aca0c.js"><link rel="prefetch" href="/blog/assets/js/25.8bd8c2c3.js"><link rel="prefetch" href="/blog/assets/js/3.1bd67bfe.js"><link rel="prefetch" href="/blog/assets/js/4.69e95b75.js"><link rel="prefetch" href="/blog/assets/js/5.83a5511f.js"><link rel="prefetch" href="/blog/assets/js/6.3c2a093e.js"><link rel="prefetch" href="/blog/assets/js/7.38b54764.js"><link rel="prefetch" href="/blog/assets/js/8.6ee2f7a3.js"><link rel="prefetch" href="/blog/assets/js/9.c792a14a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">suky blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link router-link-active">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link router-link-active">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/else/" aria-current="page" class="sidebar-link">/else/</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ios-经历过的-bug"><a href="#ios-经历过的-bug" class="header-anchor">#</a> IOS 经历过的 BUG</h1> <h2 id="javascript-解决音频-audio-在-ios-系统下无法播放问题"><a href="#javascript-解决音频-audio-在-ios-系统下无法播放问题" class="header-anchor">#</a> Javascript 解决音频 audio 在 IOS 系统下无法播放问题</h2> <p>先调用一次 xxx.play(),在马上暂停 xxx.pause()</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>audio<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  audio<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="ios-浏览器-keyframes-显示动画与其他浏览器不一致"><a href="#ios-浏览器-keyframes-显示动画与其他浏览器不一致" class="header-anchor">#</a> IOS 浏览器@keyframes 显示动画与其他浏览器不一致</h2> <p>一条线的高度从 0 到 1.19rem，但是打开页面第一次高度经过 0.5 秒并没有到 1.19rem，就是显示了一点长度就停止了，过了 0.5 秒以后会继续执行其他的动画.
+首次加载页面时 IOS 计算 rem 单位的时候有问题，切换组件隐藏显示再加载动画的时候能正常显示，是因为此时计算 rem 已经正确了。所以延迟加载首页动画，等页面计算好 rem 单位后再加载动画就不会出现显示问题了。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//延迟到JS中加载</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;.scen_processLine1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">&quot;animation&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.8a54f0e1.js" defer></script><script src="/blog/assets/js/2.99672014.js" defer></script><script src="/blog/assets/js/10.30098915.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>批量注册指令 | suky blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just for fun">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.8a54f0e1.js" as="script"><link rel="preload" href="/blog/assets/js/2.99672014.js" as="script"><link rel="preload" href="/blog/assets/js/19.f10316de.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.30098915.js"><link rel="prefetch" href="/blog/assets/js/11.01a7bb32.js"><link rel="prefetch" href="/blog/assets/js/12.f6a23b29.js"><link rel="prefetch" href="/blog/assets/js/13.783d2ca3.js"><link rel="prefetch" href="/blog/assets/js/14.bbca777a.js"><link rel="prefetch" href="/blog/assets/js/15.7aee58fc.js"><link rel="prefetch" href="/blog/assets/js/16.bc1a9abb.js"><link rel="prefetch" href="/blog/assets/js/17.55ad85a5.js"><link rel="prefetch" href="/blog/assets/js/18.58d328b7.js"><link rel="prefetch" href="/blog/assets/js/20.4c11b076.js"><link rel="prefetch" href="/blog/assets/js/21.ceb3b920.js"><link rel="prefetch" href="/blog/assets/js/22.5de30657.js"><link rel="prefetch" href="/blog/assets/js/23.f0173a34.js"><link rel="prefetch" href="/blog/assets/js/24.225aca0c.js"><link rel="prefetch" href="/blog/assets/js/25.8bd8c2c3.js"><link rel="prefetch" href="/blog/assets/js/3.1bd67bfe.js"><link rel="prefetch" href="/blog/assets/js/4.69e95b75.js"><link rel="prefetch" href="/blog/assets/js/5.83a5511f.js"><link rel="prefetch" href="/blog/assets/js/6.3c2a093e.js"><link rel="prefetch" href="/blog/assets/js/7.38b54764.js"><link rel="prefetch" href="/blog/assets/js/8.6ee2f7a3.js"><link rel="prefetch" href="/blog/assets/js/9.c792a14a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">suky blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link router-link-active">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link">
+  其他
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/modules/" class="nav-link router-link-active">
+  功能实现
+</a></div><div class="nav-item"><a href="/blog/theory/" class="nav-link">
+  理论
+</a></div><div class="nav-item"><a href="/blog/visualization/" class="nav-link">
+  可视化
+</a></div><div class="nav-item"><a href="/blog/engineering/" class="nav-link">
+  前端工程化
+</a></div><div class="nav-item"><a href="/blog/else/" class="nav-link">
+  其他
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/modules/" aria-current="page" class="sidebar-link">基础知识</a></li><li><a href="/blog/modules/video.html" class="sidebar-link">video 的那些事</a></li><li><a href="/blog/modules/vue-directive.html" class="sidebar-link">VUE 自定义指令便利店</a></li><li><a href="/blog/modules/vue-practice.html" aria-current="page" class="active sidebar-link">批量注册指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/modules/vue-practice.html#批量注册指令" class="sidebar-link">批量注册指令</a></li><li class="sidebar-sub-header"><a href="/blog/modules/vue-practice.html#vue-中-axios-请求配置-token-过期和登录成功重新跳转" class="sidebar-link">vue 中 axios 请求配置 token 过期和登录成功重新跳转</a></li></ul></li><li><a href="/blog/modules/web-worker.html" class="sidebar-link">❗ 实时推送-web worker</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="批量注册指令"><a href="#批量注册指令" class="header-anchor">#</a> 批量注册指令</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// directives/index</span>
+<span class="token keyword">import</span> copy <span class="token keyword">from</span> <span class="token string">&quot;./copy&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> longpress <span class="token keyword">from</span> <span class="token string">&quot;./longpress&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 自定义指令</span>
+<span class="token keyword">const</span> directives <span class="token operator">=</span> <span class="token punctuation">{</span>
+  copy<span class="token punctuation">,</span>
+  longpress<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">install</span><span class="token punctuation">(</span><span class="token parameter">Vue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>directives<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> directives<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// main.js</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Directives <span class="token keyword">from</span> <span class="token string">&quot;./directives&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Directives<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="vue-中-axios-请求配置-token-过期和登录成功重新跳转"><a href="#vue-中-axios-请求配置-token-过期和登录成功重新跳转" class="header-anchor">#</a> vue 中 axios 请求配置 token 过期和登录成功重新跳转</h2> <h4 id="后端"><a href="#后端" class="header-anchor">#</a> 后端</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// jwt.js</span>
+<span class="token keyword">const</span> jwt <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'jsonwebtoken'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token constant">SECRET_KEY</span><span class="token punctuation">,</span> <span class="token constant">JWT_EXPIRES</span><span class="token punctuation">,</span> <span class="token constant">REFRESH_JWT_EXPIRES</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../config/config'</span><span class="token punctuation">)</span> <span class="token comment">// 从配置文件中引入 SECRET_KEY，token 过期时间，refreshToken 过期时间</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> cacheUser <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../cache/user'</span><span class="token punctuation">)</span> <span class="token comment">// 用闭包缓存用户名</span>
+
+<span class="token comment">/**
+ * 生成 token 和 initToken
+ * @param {string} username
+ */</span>
+<span class="token keyword">function</span> <span class="token function">initToken</span> <span class="token punctuation">(</span><span class="token parameter">username</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    token<span class="token operator">:</span> jwt<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      username<span class="token operator">:</span> username
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token constant">SECRET_KEY</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      expiresIn<span class="token operator">:</span> <span class="token constant">JWT_EXPIRES</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    refresh_token<span class="token operator">:</span> jwt<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      username
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token constant">SECRET_KEY</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      expiresIn<span class="token operator">:</span> <span class="token constant">REFRESH_JWT_EXPIRES</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 验证 token/refreshToken
+ * @param {string} token 格式为 `Beare ${token}`
+ */</span>
+<span class="token keyword">function</span> <span class="token function">validateToken</span> <span class="token punctuation">(</span><span class="token parameter">token<span class="token punctuation">,</span> type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    token <span class="token operator">=</span> token<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^Bearer </span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> username <span class="token punctuation">}</span> <span class="token operator">=</span> jwt<span class="token punctuation">.</span><span class="token function">verify</span><span class="token punctuation">(</span>token<span class="token punctuation">,</span> <span class="token constant">SECRET_KEY</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">!==</span> <span class="token string">'refreshToken'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 如果是 token 且 token 生效，缓存 token</span>
+      cacheUser<span class="token punctuation">.</span><span class="token function">setUserName</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  initToken<span class="token punctuation">,</span>
+  getTokenUser<span class="token punctuation">,</span>
+  validateToken
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 检查是否登录中间件方法</span>
+<span class="token function">checkLogin</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> headers<span class="token operator">:</span> <span class="token punctuation">{</span> authorization <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> req
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>authorization<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">402</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> code<span class="token operator">:</span> <span class="token string">'ERROR'</span><span class="token punctuation">,</span> data<span class="token operator">:</span> <span class="token string">'未检测到登录信息'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token function">validateToken</span><span class="token punctuation">(</span>authorization<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>message <span class="token operator">===</span> <span class="token string">'jwt expired'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// token 超时</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> code<span class="token operator">:</span> <span class="token string">'ERROR'</span><span class="token punctuation">,</span> data<span class="token operator">:</span> <span class="token string">'登录超时'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">402</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> code<span class="token operator">:</span> <span class="token string">'ERROR'</span><span class="token punctuation">,</span> data<span class="token operator">:</span> <span class="token string">'未检测到登录信息'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 添加请求拦截器，在请求头中加token</span>
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> token <span class="token operator">=</span> sessionStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">&quot;Authorization&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 设置到头部</span>
+      config<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>Authorization <span class="token operator">=</span> token<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> config<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> response<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 1. 如果没有refresh_token,则直接跳转登录页</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">.</span>response <span class="token operator">&amp;&amp;</span> error<span class="token punctuation">.</span>response<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">401</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> user <span class="token operator">=</span> store<span class="token punctuation">.</span>status<span class="token punctuation">.</span>user<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>user <span class="token operator">||</span> <span class="token operator">!</span>user<span class="token punctuation">.</span>refresh_token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">redirectLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 2.如果有，则请求更新token</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        method<span class="token operator">:</span> <span class="token string">&quot;PUT&quot;</span><span class="token punctuation">,</span>
+        url<span class="token operator">:</span> <span class="token string">&quot;http://ttapi.research.itcast.cn/app/v1_0/authorizations&quot;</span><span class="token punctuation">,</span>
+        headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+          Authorization<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Bearer </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>user<span class="token punctuation">.</span>refresh_token<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 3.如果刷新token成功了，则把新的token更新到容器中</span>
+      window<span class="token punctuation">.</span>sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">&quot;Authorization&quot;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 4.把之前失败的请求继续发出去</span>
+      <span class="token keyword">return</span> <span class="token function">axios</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;刷新token失败&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">redirectLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">redirectLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;/login&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// query参数会以？key=value&amp;key=value的格式添加到url后面</span>
+    <span class="token comment">// query参数不需要配置路由规则，可以传递任何参数</span>
+    <span class="token comment">// query是固定的语法给是，用来传递?key=value查询字符串</span>
+    query<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 这里使用查询参数跳转回来的路由地址传递给了登录页面</span>
+      <span class="token comment">// router.currentRoute就是当前路由对象，好比我们再组件中的this.$route</span>
+      <span class="token comment">// 当前路由对象的fullPath,就是当前路由的路径</span>
+      <span class="token comment">// redirect是我起的一个名字</span>
+      redirect<span class="token operator">:</span> router<span class="token punctuation">.</span>currentRoute<span class="token punctuation">.</span>fullPath<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> redirect <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span>query<span class="token punctuation">.</span>redirect <span class="token operator">||</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>redirect<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/modules/vue-directive.html" class="prev">
+        VUE 自定义指令便利店
+      </a></span> <span class="next"><a href="/blog/modules/web-worker.html">
+        ❗ 实时推送-web worker
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.8a54f0e1.js" defer></script><script src="/blog/assets/js/2.99672014.js" defer></script><script src="/blog/assets/js/19.f10316de.js" defer></script>
+  </body>
+</html>
